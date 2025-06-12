@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient()); // Ensures links open within the WebView
         webView.getSettings().setJavaScriptEnabled(true); // Enable JavaScript (optional, but common)
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("https://dastavval.com");
     }
 
     // Optional: Handle back button press to navigate WebView history

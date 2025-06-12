@@ -24,12 +24,11 @@ public class WebViewActivityTest {
             new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-    public void testWebViewLoadsGoogle() {
+    public void testWebViewLoadsDastavval() {
         // Wait for the WebView to load the page and assert its content.
-        // This example checks if the page title contains "Google".
-        // You might need to adjust the timeout and assertion based on network speed and page content.
+        // This example checks if the page body contains "دستاوال".
         onWebView()
-                .withElement(findElement(Locator.TAG_NAME, "title")) // Find the title element
-                .check(webMatches(getText(), containsString("Google"))); // Check if its text contains "Google"
+                .withElement(findElement(Locator.TAG_NAME, "body")) // Find the body element
+                .check(webMatches(getText(), containsString("دستاوال"))); // Check if its text contains "دستاوال"
     }
 }
