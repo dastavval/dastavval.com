@@ -1,31 +1,34 @@
-### معرفی سایت دست اول: تامین مواد اولیه و پوره سیب
+# Android WebView Application for Dastavval.com
 
-**سایت دست اول** یکی از معتبرترین و پیشروترین تامین‌کنندگان مواد اولیه کارخانجات غذایی در ایران است. این سایت با هدف ارائه بهترین و باکیفیت‌ترین مواد اولیه به تولیدکنندگان و کارخانجات غذایی، فعالیت خود را آغاز کرده و توانسته است جایگاه ویژه‌ای در بازار به دست آورد.
+This is a simple Android application whose primary function is to display the website [https://dastavval.com](https://dastavval.com) using an Android WebView component.
 
-#### تامین مواد اولیه
+## Project Specifications
 
-سایت دست اول با بهره‌گیری از تیمی مجرب و متخصص، انواع مواد اولیه مورد نیاز کارخانجات غذایی را تامین می‌کند. این مواد شامل انواع پوره‌ها، کنسانتره‌ها، اسانس‌ها و سایر مواد اولیه مورد نیاز برای تولید محصولات غذایی می‌باشد. بازرگانی دست اول با داشتن شبکه گسترده‌ای از تامین‌کنندگان معتبر، تضمین می‌کند که مواد اولیه با بهترین کیفیت و قیمت مناسب به دست مشتریان برسد.
+### Purpose
+The application serves as a dedicated mobile interface for the website `dastavval.com`. It provides users with direct access to the site's content within a native app experience.
 
-#### پوره سیب
+### Technologies Used
+- **Programming Language:** Java
+- **Platform:** Android SDK
+- **Core Component:** Android WebView for displaying web content.
+- **User Interface:** Basic Android XML layouts.
 
-یکی از محصولات ویژه‌ای که سایت دست اول ارائه می‌دهد، **پوره سیب** است. این محصول با استفاده از بهترین و تازه‌ترین سیب‌های باغات ایران تهیه می‌شود و در فرآیندی کاملاً بهداشتی و استاندارد تولید می‌گردد. پوره سیب دست اول به دلیل کیفیت بالا و طعم بی‌نظیر، مورد توجه بسیاری از کارخانجات تولید محصولات غذایی قرار گرفته است.
+### Testing
+- **Framework:** Espresso (Android UI testing framework)
+- **Test Coverage:**
+    - `WebViewActivityTest.java`: Contains UI tests to ensure the `MainActivity` correctly loads and displays content from `https://dastavval.com`. The test specifically checks for the presence of the text "دستاوال" within the loaded page's body.
 
-#### چرا سایت دست اول؟
+### Project Structure
+- `app/src/main/java/com/example/webviewapp/MainActivity.java`: The main activity that initializes and manages the WebView.
+- `app/src/main/res/layout/activity_main.xml`: The XML layout file defining the WebView container.
+- `app/src/main/AndroidManifest.xml`: Application manifest file, including internet permissions required for the WebView.
+- `app/build.gradle`: Application-level Gradle build script, containing dependencies for AndroidX libraries and Espresso.
+- `app/src/androidTest/java/com/example/webviewapp/WebViewActivityTest.java`: Espresso UI test class.
 
-- **کیفیت بالا**: تمامی محصولات ارائه شده توسط سایت دست اول از بهترین مواد اولیه تهیه شده و تحت نظارت دقیق کیفی قرار دارند.
-- **قیمت مناسب**: بازرگانی دست اول با حذف واسطه‌ها و خرید مستقیم از تولیدکنندگان، توانسته است قیمت‌های رقابتی و مناسبی را به مشتریان خود ارائه دهد.
-- **تحویل سریع**: بازرگانی دست اول با داشتن شبکه توزیع گسترده، محصولات را در کوتاه‌ترین زمان ممکن به دست مشتریان می‌رساند.
-- **پشتیبانی مشتریان**: تیم پشتیبانی سایت دست اول همواره آماده پاسخگویی به سوالات و نیازهای مشتریان می‌باشد.
-
-برای کسب اطلاعات بیشتر و سفارش محصولات، به سایت **دست اول** مراجعه کنید و از خدمات بی‌نظیر این مجموعه بهره‌مند شوید.
-
-https://dastavval.com
-
-
-
-
-تلفن 09999123001
-
-
-
-تلفن 09044502988
+### How to Build and Run
+1. Ensure you have Android Studio installed and configured.
+2. Clone this repository.
+3. Open the project in Android Studio.
+4. Let Gradle sync the project dependencies.
+5. Run the application on an Android emulator or a physical device.
+6. To run tests, right-click on the `androidTest` directory or `WebViewActivityTest.java` and select "Run tests".
